@@ -2426,32 +2426,29 @@ function Home() {
       },
       placeholder: "Search"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-      className: "todoListContainer",
+      className: "todo-list-container",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
         onSubmit: handleSubmit(addTodo),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread(_objectSpread({
           type: "text"
         }, register('todo')), {}, {
-          id: "newTodo",
+          className: "new-todo",
           placeholder: "add todo"
         })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
           type: "submit",
-          id: "addTodo",
+          className: "add-todo",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
             className: "fa fa-plus"
           })
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("ul", {
-        id: "todoList",
+        className: "todo-list",
         children: todos.data && (todos === null || todos === void 0 ? void 0 : todos.data.map(function (todo) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
-            id: "li listItemID",
             children: [editInput === false && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
-              className: "todotext",
               children: todo.todo
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              "data-id": "li listItemID",
-              className: "removeTodo",
+              className: "remove-todo",
               onClick: function onClick() {
                 return deleteTodo(todo.id);
               },
@@ -2467,8 +2464,7 @@ function Home() {
                   return setUpTodo(e.target.value);
                 }
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-                "data-id": "li listItemID",
-                className: "doneTodo",
+                className: "done-todo",
                 onClick: function onClick() {
                   return updateTodo(todo.id);
                 },
@@ -2477,7 +2473,6 @@ function Home() {
                 })
               })]
             }), editInput === false && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
-              "data-id": "li listItemID",
               onClick: function onClick() {
                 return setEditInput(true);
               },

@@ -15,11 +15,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    .todoListContainer button {
-        outline: none;
-        cursor: pointer;
-    }
-    .todoListContainer {
+    .todo-list-container {
         background-color: white;
         padding: 10px;
         border-radius: 3px;
@@ -28,15 +24,77 @@ body{
         min-width: 500px;
         max-width: 100%;
         overflow: auto;
-    }
-    #todoList {
-        text-align: left;
-        list-style-type: none;
-        margin: 0;
-        margin-top: 60px;
-        float: none;
-        padding: 0;
-        width: 100%;
+        max-height: 300px;
+        form{
+            .new-todo {
+                padding: 10px;
+                border-radius: 3px 0 0 3px;
+                border: 0px;
+                border-bottom: 1px solid #cecece;
+                width: 80%;
+                float: left;
+                outline: none;
+            }
+
+            .add-todo {
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                float: right;
+                border: 0px;
+                background-color: #fc616d;
+                cursor: pointer;
+                .fa {
+                    color: white;
+                }
+            }
+        }
+        button {
+            outline: none;
+            cursor: pointer;
+        }
+        .todo-list {
+            text-align: left;
+            list-style-type: none;
+            margin-top: 60px;
+            float: none;
+            padding: 0;
+            width: 100%;
+
+            li {
+                border: 0px;
+                border-bottom: 1px solid #f3f3f3;
+                padding: 10px;
+                margin: 5px auto;
+                clear: both;
+                transition: all 1.3s ease-in-out;
+                animation: fadein 1.3s ease-in-out;
+                p {
+                    display: inline-block;
+                    margin: 0;
+                    text-overflow: ellipsis !important;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                }
+                button {
+                    float: right;
+                    margin: -5px 5px;
+                    border-radius: 100%;
+                    border: 0px solid transparent;
+                    width: 25px;
+                    height: 25px;
+                    text-align:center;
+                }
+                .done-todo {
+                    background-color: #00d7a1;
+                    color: white;
+                }
+                .remove-todo {
+                    background-color: #f43449;
+                    color: white;
+                }
+            }
+        }
     }
     @keyframes fadein {
         from {
@@ -46,98 +104,8 @@ body{
             background-color: white;
         }
     }
-    #todoList li {
-        border: 0px;
-        border-bottom: 1px solid #f3f3f3;
-        padding: 10px;
-        margin: 5px auto;
-        clear: both;
-        transition: all 1.3s ease-in-out;
-        animation: fadein 1.3s ease-in-out;
-    }
-
-    #todoList li p {
-        display: inline-block;
-        margin: 0;
-        text-overflow: ellipsis !important;
-        overflow: hidden;
-        transition: all 0.3s ease;
-    }
-
-    #todoList li button {
-        float: right;
-        margin: -5px 5px;
-        border-radius: 100%;
-        border: 0px solid transparent;
-        width: 25px;
-        height: 25px;
-        text-align:center;
-    }
-    #newTodo {
-        padding: 10px;
-        border-radius: 3px 0 0 3px;
-        border: 0px;
-        border-bottom: 1px solid #cecece;
-        width: 80%;
-        float: left;
-        outline: none;
-    }
-    #addTodo {
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        float: right;
-        border: 0px;
-        background-color: #fc616d;
-        cursor: pointer;
-    }
-    #addTodo .fa {
-        color: white;
-    }
-    .lineThrough {
-        text-decoration-line: line-through;
-        color: lightgrey;
-    }
-
-    .doneTodo {
-        background-color: #00d7a1;
-        color: white;
-    }
-    .removeTodo {
-        background-color: #f43449;
-        color: white;
-    }
-
-    .doneTodoGrey {
-        background-color: grey;
-    }
-
-    .sohrabsLink {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        position: fixed;
-        font-weight: bold;
-        margin: 20px auto;
-        width: 180px;
-        text-align: center;
-        text-decoration: none;
-        padding: 5px;
-        font-size: 14px;
-        border-radius: 20px;
-        bottom: 0;
-        color: #fc616d;
-        background-color: white;
-        transform: translateX(-50%);
-        left: 50%;
-    }
 
 
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-        select,
-        textarea,
-        input {
-            font-size: 16px;
-        }
-    }
 
     .pagination{
         display: flex;
@@ -157,8 +125,6 @@ body{
 
 
 /* Login */
-
-
 .wrapper{
     display: flex;
     justify-content: center;

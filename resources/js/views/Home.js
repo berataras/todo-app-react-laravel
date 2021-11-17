@@ -72,32 +72,32 @@ function Home() {
 
             <input type="text" className="form-control w-100 mb-2" onChange={(e) => searchTodo(e.target.value)} placeholder="Search"/>
 
-            <div className="todoListContainer">
+            <div className="todo-list-container">
                     <form onSubmit={handleSubmit(addTodo)}>
-                        <input type="text" {...register('todo')} id="newTodo" placeholder="add todo" />
-                        <button type="submit" id="addTodo" ><i className="fa fa-plus" /></button>
+                        <input type="text" {...register('todo')} className="new-todo" placeholder="add todo" />
+                        <button type="submit" className="add-todo" ><i className="fa fa-plus" /></button>
                     </form>
-                    <ul id="todoList">
+                    <ul className="todo-list">
                         {todos.data &&
                             todos?.data.map((todo) => {
                                 return(
-                                    <li key={todo.id} id="li listItemID">
+                                    <li key={todo.id}>
                                         {editInput === false &&
-                                        <p className="todotext">{todo.todo}</p>
+                                        <p>{todo.todo}</p>
                                         }
-                                        <button data-id="li listItemID" className="removeTodo" onClick={() => deleteTodo(todo.id)}>
+                                        <button className="remove-todo" onClick={() => deleteTodo(todo.id)}>
                                             <i className="fa fa-minus" />
                                         </button>
                                         {editInput &&
                                             <>
                                                 <input type="text" id={todo.id} defaultValue={todo.todo} onChange={(e) => setUpTodo(e.target.value)} />
-                                                <button data-id="li listItemID" className="doneTodo" onClick={() => updateTodo(todo.id)}>
+                                                <button className="done-todo" onClick={() => updateTodo(todo.id)}>
                                                     <i className="fa fa-check" />
                                                 </button>
                                             </>
                                         }
                                         {editInput === false &&
-                                            <button data-id="li listItemID" onClick={() => setEditInput(true)} id={todo.id}>
+                                            <button onClick={() => setEditInput(true)} id={todo.id}>
                                                 <i className="fa fa-pencil" />
                                             </button>
                                         }
