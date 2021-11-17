@@ -26,23 +26,28 @@ body {
   overflow: auto;
   max-height: 300px;
 }
-.home .todo-list-container form .new-todo {
+.home .todo-list-container form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home .todo-list-container form input {
   padding: 10px;
   border-radius: 3px 0 0 3px;
   border: 0px;
   border-bottom: 1px solid #cecece;
-  width: 80%;
+  width: 95%;
   float: left;
   outline: none;
 }
 .home .todo-list-container form .add-todo {
   border-radius: 50%;
-  width: 30px;
   height: 30px;
   float: right;
   border: 0px;
   background-color: #fc616d;
   cursor: pointer;
+  width: 5%;
 }
 .home .todo-list-container form .add-todo .fa {
   color: white;
@@ -54,7 +59,7 @@ body {
 .home .todo-list-container .todo-list {
   text-align: left;
   list-style-type: none;
-  margin-top: 60px;
+  margin-top: 10px;
   float: none;
   padding: 0;
   width: 100%;

@@ -2432,7 +2432,6 @@ function Home() {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", _objectSpread(_objectSpread({
           type: "text"
         }, register('todo')), {}, {
-          className: "new-todo",
           placeholder: "add todo"
         })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
           type: "submit",

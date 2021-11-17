@@ -74,7 +74,7 @@ function Home() {
 
             <div className="todo-list-container">
                     <form onSubmit={handleSubmit(addTodo)}>
-                        <input type="text" {...register('todo')} className="new-todo" placeholder="add todo" />
+                        <input type="text" {...register('todo')} placeholder="add todo" />
                         <button type="submit" className="add-todo" ><i className="fa fa-plus" /></button>
                     </form>
                     <ul className="todo-list">
