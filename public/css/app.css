@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  overflow: hidden;
+  background-color: #7d71de;
+  font-family: "Poppins", sans-serif;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.home .todoListContainer button {
+  outline: none;
+  cursor: pointer;
+}
+.home .todoListContainer {
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  min-width: 500px;
+  max-width: 100%;
+  overflow: auto;
+}
+.home #todoList {
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 60px;
+  float: none;
+  padding: 0;
+  width: 100%;
+}
+@keyframes fadein {
+  from {
+    background-color: #ffffab;
+  }
+  to {
+    background-color: white;
+  }
+}
+.home #todoList li {
+  border: 0px;
+  border-bottom: 1px solid #f3f3f3;
+  padding: 10px;
+  margin: 5px auto;
+  clear: both;
+  transition: all 1.3s ease-in-out;
+  animation: fadein 1.3s ease-in-out;
+}
+.home #todoList li p {
+  display: inline-block;
+  margin: 0;
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.home #todoList li button {
+  float: right;
+  margin: -5px 5px;
+  border-radius: 100%;
+  border: 0px solid transparent;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+.home #newTodo {
+  padding: 10px;
+  border-radius: 3px 0 0 3px;
+  border: 0px;
+  border-bottom: 1px solid #cecece;
+  width: 80%;
+  float: left;
+  outline: none;
+}
+.home #addTodo {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  float: right;
+  border: 0px;
+  background-color: #fc616d;
+  cursor: pointer;
+}
+.home #addTodo .fa {
+  color: white;
+}
+.home .lineThrough {
+  text-decoration-line: line-through;
+  color: lightgrey;
+}
+.home .doneTodo {
+  background-color: #00d7a1;
+  color: white;
+}
+.home .removeTodo {
+  background-color: #f43449;
+  color: white;
+}
+.home .doneTodoGrey {
+  background-color: grey;
+}
+.home .sohrabsLink {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: fixed;
+  font-weight: bold;
+  margin: 20px auto;
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 20px;
+  bottom: 0;
+  color: #fc616d;
+  background-color: white;
+  transform: translateX(-50%);
+  left: 50%;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .home select,
+.home textarea,
+.home input {
+    font-size: 16px;
+  }
+}
+.home .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.home .pagination li {
+  list-style: none;
+}
+.home .pagination li a {
+  text-decoration: none;
+}
+
+/* Login */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .form-signin {
+  width: 580px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=app.css.map */
